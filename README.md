@@ -26,25 +26,32 @@ Standard Deviation is also a measure of how values jump around in dataset.
 #### Standardize the dataset
 So to standardize values in a matrix like below, we need to centre the value around 0, and reduce the variance to 1 : 
 
+<code>
 [
-| Column 1      | Column 2      | Column 3 |
-| ------------- |---------------| ---------|
-| [x<sub>11</sub>, | x<sub>12</sub>, | x<sub>13</sub>] |
-| [x<sub>21</sub>, | x<sub>22</sub>, | x<sub>23</sub>] |
-| [x<sub>31</sub>, | x<sub>32</sub>, | x<sub>33</sub>] |
+
+[x<sub>11</sub>, | x<sub>12</sub>, | x<sub>13</sub>]
+
+[x<sub>21</sub>, | x<sub>22</sub>, | x<sub>23</sub>]
+
+[x<sub>31</sub>, | x<sub>32</sub>, | x<sub>33</sub>]
+
 ]
+</code>
 
 (When represending data in matrix, data in a column will belong to a feature)
 We can centre the dataset values around 0 by substracting the mean value of the column, from that column's data. And to reduce variance to 1, we can divide this value by standard deviation for that feature (column data)
 
+<code>
 [
-| Column 1      | Column 2      | Column 3 |
-| ------------- |---------------| ---------|
-| [(x<sub>11</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), | (x<sub>12</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), | (x<sub>13</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)] |
-| [(x<sub>21</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), | (x<sub>22</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), | (x<sub>23</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)] |
-| [(x<sub>31</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), | (x<sub>32</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), | (x<sub>33</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)] |
-]
 
+[(x<sub>11</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), (x<sub>12</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), (x<sub>13</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)]
+
+[(x<sub>21</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), (x<sub>22</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), (x<sub>23</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)]
+
+[(x<sub>31</sub> - mean(x<sub>i1</sub>)) / std_dev(x<sub>i1</sub>), (x<sub>32</sub> - mean(x<sub>i2</sub>)) / std_dev(x<sub>i2</sub>), (x<sub>33</sub> - mean(x<sub>i3</sub>)) / std_dev(x<sub>i3</sub>)]
+
+]
+</code>
 
 ## Regression Models
 
